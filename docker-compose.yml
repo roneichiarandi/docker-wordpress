@@ -1,0 +1,14 @@
+wordpress:
+    build: .
+    container_name: "all-wordpress"
+    volumes:
+      - ./wp-content/:/var/www/html/wp-content
+    links:
+      - db:mysql
+    ports:
+      - "8080:80"
+
+db:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
