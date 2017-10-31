@@ -1,5 +1,4 @@
-FROM wordpress
-
+FROM wordpress:php7.1-fpm-alpine
 MAINTAINER <ronei.chiarandi@gmail.com>
 
-COPY ./wp-content /var/www/html/wp-content
+COPY ./wp-content /usr/src/wordpress/wp-content
